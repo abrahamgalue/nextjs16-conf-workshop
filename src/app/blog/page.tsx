@@ -3,7 +3,7 @@ import {Suspense} from "react";
 import {getBlogPosts, getCategories} from "@/api";
 
 import BlogPosts, {BlogPostsSkeleton} from "@/components/blog-posts";
-import CategoryFilter from "@/components/category-filter";
+import CategoryFilter, {CategoryFilterSkeleton} from "@/components/category-filter";
 
 async function SearchResults({searchParams}: {searchParams: Promise<{category?: string}>}) {
   const {category} = await searchParams;
@@ -26,7 +26,9 @@ export default async function BlogPage({
         <p className="text-muted-foreground">Discover our latest articles and insights</p>
       </header>
 
-      <CategoryFilter categories={categories} />
+      <Suspense fallback={<CategoryFilterSkeleton />}>
+        <CategoryFilter categories={categories} searchParams={searchParams} />
+      </Suspense>
 
       <Suspense fallback={<BlogPostsSkeleton />}>
         <SearchResults searchParams={searchParams} />
