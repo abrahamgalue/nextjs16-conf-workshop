@@ -18,7 +18,7 @@ const getBlogStats = async () => {
 export default async function HomePage() {
   "use cache";
 
-  cacheLife("minutes");
+  cacheLife("blog");
 
   const [featuredPosts, stats] = await Promise.all([getFeaturedBlogPosts(), getBlogStats()]);
 
