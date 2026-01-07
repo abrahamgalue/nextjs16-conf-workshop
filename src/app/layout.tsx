@@ -64,7 +64,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
                   . The source code is available on{" "}
                   <a
                     className="hover:text-foreground font-medium underline underline-offset-4"
-                    href="https://github.com/acme/blog"
+                    href="https://github.com/abrahamgalue/nextjs16-conf-workshop"
                     rel="noreferrer"
                     target="_blank"
                   >
