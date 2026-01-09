@@ -73,7 +73,7 @@ Add a dynamic section to the end of the blog post page to show the featured post
 
 - [X] Show the active category in the `category-filter` component.
 - [X] Create a custom cache profile in `next.config.ts` and use it.
-- [ ] Deploy the application and verify everything works.
+- [X] Deploy the application and verify everything works.
 
 ## Resources
 
